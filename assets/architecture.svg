@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1180" font-family="'PingFang SC','Microsoft YaHei',-apple-system,Segoe UI,Roboto,sans-serif">
+  <defs>
+    <linearGradient id="head" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f2937"/><stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="entry" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/><stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="human" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0891b2"/><stop offset="1" stop-color="#0e7490"/>
+    </linearGradient>
+    <linearGradient id="content" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ca8a04"/><stop offset="1" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="verify" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dc2626"/><stop offset="1" stop-color="#b91c1c"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+    <style>
+      .box{fill:#fff;stroke:#cbd5e1;stroke-width:1.5;rx:10}
+      .t{fill:#0f172a;font-size:14px;font-weight:600}
+      .s{fill:#475569;font-size:12px}
+      .cap{fill:#94a3b8;font-size:12px;font-weight:700;letter-spacing:1px}
+      .flow{stroke:#64748b;stroke-width:2;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="960" height="1180" fill="#f8fafc"/>
+
+  <!-- title -->
+  <rect x="0" y="0" width="960" height="56" fill="url(#head)"/>
+  <text x="480" y="35" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">cht-zhengliu-skill · 正流 蒸馏编排架构</text>
+
+  <!-- input objects -->
+  <text x="480" y="92" text-anchor="middle" class="cap">四类可被蒸馏的对象</text>
+  <g>
+    <rect x="60"  y="104" width="180" height="44" rx="10" fill="#eef2ff" stroke="#a5b4fc"/>
+    <text x="150" y="131" text-anchor="middle" class="t">👤 身边人 / 搭档</text>
+    <rect x="260" y="104" width="180" height="44" rx="10" fill="#eef2ff" stroke="#a5b4fc"/>
+    <text x="350" y="131" text-anchor="middle" class="t">🌐 公开人物</text>
+    <rect x="460" y="104" width="180" height="44" rx="10" fill="#eef2ff" stroke="#a5b4fc"/>
+    <text x="550" y="131" text-anchor="middle" class="t">🪞 你自己</text>
+    <rect x="660" y="104" width="180" height="44" rx="10" fill="#fef9c3" stroke="#facc15"/>
+    <text x="750" y="131" text-anchor="middle" class="t">📚 书 / 视频 / 播客</text>
+  </g>
+
+  <!-- entry orchestrator -->
+  <rect x="300" y="180" width="360" height="64" rx="14" fill="url(#entry)"/>
+  <text x="480" y="208" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">SKILL.md · 路由编排器（正流）</text>
+  <text x="480" y="229" text-anchor="middle" fill="#e9d5ff" font-size="12">判定模式 → 调度方法论 → 统一标准产出</text>
+
+  <!-- routing decision -->
+  <path class="flow" d="M480,244 L480,272"/>
+  <rect x="355" y="272" width="250" height="40" rx="10" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="480" y="297" text-anchor="middle" fill="#6d28d9" font-size="13" font-weight="700">路由决策：是人 or 是内容？</text>
+
+  <!-- split to two pipelines -->
+  <path class="flow" d="M410,312 L210,352"/>
+  <path class="flow" d="M550,312 L750,352"/>
+
+  <!-- HUMAN pipeline -->
+  <text x="210" y="346" text-anchor="middle" fill="#0e7490" font-size="14" font-weight="800">人物类（蒸馏"人"）</text>
+  <rect x="40" y="358" width="340" height="150" rx="14" fill="#ecfeff" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="60" y="382" class="t" fill="#0e7490">通用流水线（四步）</text>
+  <g font-size="12" fill="#334155">
+    <rect x="60" y="392" width="300" height="26" rx="6" fill="#fff" stroke="#cbd5e1"/><text x="72" y="409">1 · 采集（来源实证，不编造）</text>
+    <rect x="60" y="424" width="300" height="26" rx="6" fill="#fff" stroke="#cbd5e1"/><text x="72" y="441">2 · 提炼 · 双层架构</text>
+    <rect x="60" y="456" width="300" height="26" rx="6" fill="#fff" stroke="#cbd5e1"/><text x="72" y="473">3 · 验证（三重验证 + 压力测试）</text>
+    <rect x="60" y="488" width="300" height="26" rx="6" fill="#fff" stroke="#cbd5e1"/><text x="72" y="505">4 · 产出 SKILL.md + 演化</text>
+  </g>
+  <rect x="40" y="524" width="340" height="80" rx="12" fill="url(#human)" opacity="0.95"/>
+  <text x="60" y="546" fill="#fff" font-size="13" font-weight="700">双层架构（Work Skill + Persona）</text>
+  <text x="60" y="566" fill="#cffafe" font-size="11.5">能力层：技术/代码习惯/Review 风格</text>
+  <text x="60" y="584" fill="#cffafe" font-size="11.5">人格层：说话方式/决策习惯/性格</text>
+  <text x="60" y="600" fill="#cffafe" font-size="11.5">演化：追加数据 · 对话纠正 · 版本回滚</text>
+
+  <!-- CONTENT pipeline -->
+  <text x="750" y="346" text-anchor="middle" fill="#b45309" font-size="14" font-weight="800">内容类（蒸馏"知识"）</text>
+  <rect x="580" y="358" width="340" height="150" rx="14" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="600" y="382" class="t" fill="#b45309">RIA-TV++ 七阶段</text>
+  <g font-size="12" fill="#334155">
+    <rect x="600" y="392" width="300" height="26" rx="6" fill="#fff" stroke="#cbd5e1"/><text x="612" y="409">R 摘录 · I 解读 · A1 内化</text>
+    <rect x="600" y="424" width="300" height="26" rx="6" fill="#fff" stroke="#cbd5e1"/><text x="612" y="441">A2 转化 · T 主题 · V 验证</text>
+    <rect x="600" y="456" width="300" height="26" rx="6" fill="#fff" stroke="#cbd5e1"/><text x="612" y="473">++ 能力卡萃取</text>
+    <rect x="600" y="488" width="300" height="26" rx="6" fill="#fff" stroke="#cbd5e1"/><text x="612" y="505">产出：能力包 Capability Bundle</text>
+  </g>
+  <rect x="580" y="524" width="340" height="80" rx="12" fill="url(#content)" opacity="0.95"/>
+  <text x="600" y="546" fill="#fff" font-size="13" font-weight="700">能力卡（R/I/A1/A2/E/B）</text>
+  <text x="600" y="566" fill="#fef3c7" font-size="11.5">把书/访谈/播客的系统表达</text>
+  <text x="600" y="584" fill="#fef3c7" font-size="11.5">精馏为可复用、可调用的方法论</text>
+  <text x="600" y="600" fill="#fef3c7" font-size="11.5">演化：同人物类，支持增量合并</text>
+
+  <!-- verification layer -->
+  <path class="flow" d="M210,604 L210,648"/>
+  <path class="flow" d="M750,604 L750,648"/>
+  <rect x="330" y="648" width="300" height="96" rx="14" fill="url(#verify)"/>
+  <text x="480" y="672" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">验证层（06-verification.md）</text>
+  <g font-size="11.5" fill="#fee2e2">
+    <text x="350" y="692">✓ 跨域出现  ·  ✓ 预测力  ·  ✓ 排他性</text>
+    <text x="350" y="710">✓ 真实问题压力测试（不过不收录）</text>
+    <text x="350" y="728">✓ 保真度评分卡 · 诚实边界声明</text>
+  </g>
+
+  <!-- emit result -->
+  <path class="flow" d="M480,744 L480,778"/>
+  <rect x="300" y="778" width="360" height="56" rx="14" fill="#16a34a"/>
+  <text x="480" y="804" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">产出：可执行 SKILL.md</text>
+  <text x="480" y="823" text-anchor="middle" fill="#dcfce7" font-size="12">Agent 可加载 · 装一次处处可用</text>
+
+  <!-- tools -->
+  <text x="480" y="872" text-anchor="middle" class="cap">配套工具（scripts/）</text>
+  <rect x="250" y="884" width="200" height="50" rx="12" fill="#fff" stroke="#94a3b8"/>
+  <text x="350" y="906" text-anchor="middle" class="t">scaffold.py</text>
+  <text x="350" y="924" text-anchor="middle" class="s">一键生成蒸馏 Skill 骨架</text>
+  <rect x="510" y="884" width="200" height="50" rx="12" fill="#fff" stroke="#94a3b8"/>
+  <text x="610" y="906" text-anchor="middle" class="t">verify.py</text>
+  <text x="610" y="924" text-anchor="middle" class="s">结构与保真度自检</text>
+
+  <!-- upstream -->
+  <rect x="40" y="980" width="880" height="160" rx="14" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="60" y="1006" class="t" fill="#475569">整合的四套上游方法论（均为 MIT）</text>
+  <g font-size="12.5" fill="#334155">
+    <rect x="60"  y="1018" width="400" height="30" rx="8" fill="#fff" stroke="#e2e8f0"/><text x="72"  y="1038">👤 colleague-skill（Distilly）· 同事 · 双层架构开创者</text>
+    <rect x="500" y="1018" width="400" height="30" rx="8" fill="#fff" stroke="#e2e8f0"/><text x="512" y="1038">🌐 nuwa-skill（女娲）· 公开人物心智模型</text>
+    <rect x="60"  y="1056" width="400" height="30" rx="8" fill="#fff" stroke="#e2e8f0"/><text x="72"  y="1076">🪞 yourself-skill（自己）· 数字分身</text>
+    <rect x="500" y="1056" width="400" height="30" rx="8" fill="#fff" stroke="#e2e8f0"/><text x="512" y="1076">📚 cangjie-skill（仓颉）· 知识精馏 RIA-TV++</text>
+    <text x="60" y="1112" fill="#64748b" font-size="11.5">© cuohuatang · 正流 Zhengliu · 本 Skill 仅编排整合，方法论文档与思路归属原作者</text>
+  </g>
+
+  <text x="480" y="1168" text-anchor="middle" fill="#94a3b8" font-size="11">来源实证 · 诚实边界 · 可验证 · 可演化 · 不克隆</text>
+</svg>

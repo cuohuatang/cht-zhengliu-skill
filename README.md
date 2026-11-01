@@ -15,6 +15,26 @@
 | `yourself` | 你自己 | [yourself-skill](https://github.com/notdog1998/yourself-skill) | Self Memory + 5 层人格 |
 | `cangjie` | 书 / 长视频 / 播客 | [cangjie-skill](https://github.com/kangarooking/cangjie-skill) | 能力包（RIA-TV++） |
 
+## 架构总览
+
+正流是一个**编排器**：判定对象类型 → 路由到正确方法论 → 按统一标准产出可被 Agent 加载的 Skill。
+人物类走"双层架构"，内容类走"RIA-TV++"，两者共用同一个**验证层**与**演化层**。
+
+![cht-zhengliu-skill 架构图](assets/architecture.svg)
+
+> 高清图见 [`assets/architecture.svg`](assets/architecture.svg)。
+
+## 四步工作流
+
+无论哪种模式，都走这条统一流水线（详情见 `references/00-overview.md`）：
+
+| 步骤 | 动作 | 关键约束 |
+| --- | --- | --- |
+| **1 · 采集 Collect** | 按模式选择数据源（聊天/邮件/文档、公开著作/访谈、书/播客…） | 来源实证，不编造 |
+| **2 · 提炼 Extract** | 人物类拆成「能力层 + 人格层」，内容类走 RIA-TV++ 七阶段 | 可复用单元化 |
+| **3 · 验证 Verify** | 三重验证（跨域出现 / 预测力 / 排他性）+ 真实问题压力测试 | 不过不收录 |
+| **4 · 产出&演化 Emit** | 写入 `SKILL.md`，支持追加数据增量合并、对话纠正、版本回滚 | 装一次处处可用 |
+
 ## 快速开始
 
 ```bash
@@ -24,6 +44,12 @@ git clone https://github.com/cuohuatang/cht-zhengliu-skill ~/.codebuddy/skills/c
 
 # 一行命令（skills 兼容安装器）
 npx skills add cuohuatang/cht-zhengliu-skill
+```
+
+装好并验证（目录名必须严格等于 `name` 字段）：
+
+```bash
+grep -rl "^name: cht-zhengliu-skill" ~/.codebuddy/skills/*/SKILL.md
 ```
 
 装好后对 Agent 说：
@@ -57,6 +83,7 @@ cht-zhengliu-skill/
 │   ├── scaffold.py               # 一键生成蒸馏 Skill 骨架
 │   └── verify.py                 # 结构与保真度自检
 └── assets/
+    └── architecture.svg          # 蒸馏编排架构图（README 内嵌）
 ```
 
 ## 脚本

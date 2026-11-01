@@ -55,6 +55,7 @@ description: 统一的人物与知识蒸馏编排技能（正流 / Zhengliu）�
 - `references/templates/persona-template.md` —— 人格/Persona 结构模板
 - `scripts/scaffold.py` —— 一键生成蒸馏 Skill 骨架
 - `scripts/verify.py` —— 结构与保真度自检
+- `assets/architecture.svg` —— 蒸馏编排架构图（总览用）
 
 ## 安装方式
 
